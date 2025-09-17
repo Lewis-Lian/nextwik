@@ -53,14 +53,30 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
+      #- name: Setup Pages
+      #  uses: actions/configure-pages@v5
+      #  with:
           # Automatically inject basePath in your Next.js configuration file and disable
           # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
           #
           # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
+      #    static_site_generator: next
+      const isProd = process.env.NODE_ENV === 'production'
+      const withNextra = require('nextra')({
+      theme: 'nextra-theme-docs',
+      themeConfig: './theme.config.jsx',
+      })
+      const nextConfig = {
+      basePath: process.env.BASE_PATH,
+      assetPrefix: process.env.ASSET_PREFIX,
+      reactStrictMode: true,
+      output: isProd ? 'export' : 'standalone',
+      distDir: 'dist',
+      images: {
+      unoptimized: true,
+      }
+      }
+module.exports = withNextra(nextConfig)
       - name: Restore cache
         uses: actions/cache@v4
         with:
