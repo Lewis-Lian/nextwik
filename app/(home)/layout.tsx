@@ -24,12 +24,12 @@ export default function Layout({ children }: { children: ReactNode }) {
           items: [
             {
               text: 'Getting Started',
-              url: '/docs/ui',
+              url: '/docs/Fumadocs',
               icon: <Book />,
             },
             {
               text: 'Components',
-              url: '/docs/ui/components',
+              url: '/docs/Fumadocs/components',
               icon: <ComponentIcon />,
             },
           ],
@@ -40,10 +40,10 @@ export default function Layout({ children }: { children: ReactNode }) {
           children: (
             <NavbarMenu>
               <NavbarMenuTrigger>
-                <Link href="/docs/ui">Documentation</Link>
+                <Link href="/docs/Fumadocs">Documentation</Link>
               </NavbarMenuTrigger>
               <NavbarMenuContent className="text-[15px]">
-                <NavbarMenuLink href="/docs/ui" className="md:row-span-2">
+                <NavbarMenuLink href="/docs/Fumadocs" className="md:row-span-2">
                   <div className="-mx-3 -mt-3">
                     <Image
                       src={Preview}
