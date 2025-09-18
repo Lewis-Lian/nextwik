@@ -12,38 +12,43 @@ import Preview from '@/public/banner.png';
 import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';
 import type { HTMLAttributes, ReactNode } from 'react';
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default function Layout({ children }: LayoutProps<'/'>) {
   return (
     <HomeLayout
       {...baseOptions()}
+      style={
+        {
+          '--spacing-fd-container': '1120px',
+        } as object
+      }
       links={[
-      {
+        {
           type: 'menu',
           on: 'menu',
           text: 'Documentation',
           items: [
             {
-              text: 'Getting Started',
-              url: '/docs/Fumadocs',
+              text: '立刻开始',
+              url: '/docs/sudynotes',
               icon: <Book />,
             },
             {
               text: 'Components',
-              url: '/docs/Fumadocs/components',
+              url: '/docs/ui/components',
               icon: <ComponentIcon />,
             },
           ],
         },
-                {
+        {
           type: 'custom',
           on: 'nav',
           children: (
             <NavbarMenu>
               <NavbarMenuTrigger>
-                <Link href="/docs/Fumadocs">Documentation</Link>
+                <Link href="/docs/sudynotes">学习笔记</Link>
               </NavbarMenuTrigger>
               <NavbarMenuContent className="text-[15px]">
-                <NavbarMenuLink href="/docs/Fumadocs" className="md:row-span-2">
+                <NavbarMenuLink href="/docs/sudynotes" className="md:row-span-2">
                   <div className="-mx-3 -mt-3">
                     <Image
                       src={Preview}
@@ -55,9 +60,9 @@ export default function Layout({ children }: { children: ReactNode }) {
                       }}
                     />
                   </div>
-                  <p className="font-medium">Getting Started</p>
+                  <p className="font-medium">立刻开始</p>
                   <p className="text-fd-muted-foreground text-sm">
-                    Learn to use Fumadocs on your docs site.
+                    这里是我个人的学习笔记和知识库，记录了我在学习和工作中积累的各种知识和经验。希望这些内容能对你有所帮助，也欢迎你与我交流和分享你的见解。
                   </p>
                 </NavbarMenuLink>
 
@@ -109,8 +114,9 @@ export default function Layout({ children }: { children: ReactNode }) {
             </NavbarMenu>
           ),
         },
-  
-    ]}
+        ...linkItems,
+      ]}
+      className="dark:bg-neutral-950 dark:[--color-fd-background:var(--color-neutral-950)]"
     >
       {children}
     </HomeLayout>

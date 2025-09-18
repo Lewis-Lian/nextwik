@@ -1,0 +1,27 @@
+{
+  "title": "Framework",
+  "description": "The docs framework",
+  "icon": "Building",
+  "root": true,
+  "pages": [
+    "---Introduction---",
+    "index",
+    "what-is-fumadocs",
+    "comparisons",
+    "---Setup---",
+    "...",
+    "---Writing---",
+    "page-conventions",
+    "markdown",
+    "navigation",
+    "---Customisation---",
+    "search",
+    "customisation",
+    "metadata",
+    "---UI---",
+    "theme",
+    "components",
+    "mdx",
+    "layouts"
+  ]
+}
