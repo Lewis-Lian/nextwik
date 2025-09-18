@@ -45,7 +45,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
           children: (
             <NavbarMenu>
               <NavbarMenuTrigger>
-                <Link href="/docs/sudynotes">学习笔记</Link>
+                <Link href="/docs/sudynotes">指南</Link>
               </NavbarMenuTrigger>
               <NavbarMenuContent className="text-[15px]">
                 <NavbarMenuLink href="/docs/sudynotes" className="md:row-span-2">
@@ -67,47 +67,46 @@ export default function Layout({ children }: LayoutProps<'/'>) {
                 </NavbarMenuLink>
 
                 <NavbarMenuLink
-                  href="/docs/ui/components"
+                  href="/docs/sudynotes/python"
                   className="lg:col-start-2"
                 >
                   <ComponentIcon className="bg-fd-primary text-fd-primary-foreground p-1 mb-2 rounded-md" />
-                  <p className="font-medium">Components</p>
+                  <p className="font-medium">Python</p>
                   <p className="text-fd-muted-foreground text-sm">
-                    Add interactive experience to your docs.
+                    Python是一种简单易学、功能强大且语法优雅的编程语言，广泛应用于数据分析、人工智能、网站开发、自动化等多个领域，适合初学者和专业开发者。
                   </p>
                 </NavbarMenuLink>
 
                 <NavbarMenuLink
-                  href="/docs/ui/openapi"
+                  href="/docs/sudynotes/linux"
                   className="lg:col-start-2"
                 >
                   <Server className="bg-fd-primary text-fd-primary-foreground p-1 mb-2 rounded-md" />
-                  <p className="font-medium">OpenAPI</p>
+                  <p className="font-medium">Linux</p>
                   <p className="text-fd-muted-foreground text-sm">
-                    Generate interactive playgrounds and docs for your OpenAPI
-                    schema.
+                    Linux是一种开源的操作系统，基于Unix内核，广泛应用于服务器、嵌入式设备和开发环境中。
                   </p>
                 </NavbarMenuLink>
 
                 <NavbarMenuLink
-                  href="/docs/ui/markdown"
+                  href="/docs/sudynotes/markdown"
                   className="lg:col-start-3 lg:row-start-1"
                 >
                   <Pencil className="bg-fd-primary text-fd-primary-foreground p-1 mb-2 rounded-md" />
                   <p className="font-medium">Markdown</p>
                   <p className="text-fd-muted-foreground text-sm">
-                    Learn the writing format/syntax of Fumadocs.
+                    Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。
                   </p>
                 </NavbarMenuLink>
 
                 <NavbarMenuLink
-                  href="/docs/ui/manual-installation"
+                  href="/docs/sudynotes/git"
                   className="lg:col-start-3 lg:row-start-2"
                 >
                   <PlusIcon className="bg-fd-primary text-fd-primary-foreground p-1 mb-2 rounded-md" />
-                  <p className="font-medium">Manual Installation</p>
+                  <p className="font-medium">Git</p>
                   <p className="text-fd-muted-foreground text-sm">
-                    Setup Fumadocs for your existing Next.js app.
+                    Git是一个分布式版本控制系统，用于跟踪文件的更改，促进协作开发。
                   </p>
                 </NavbarMenuLink>
               </NavbarMenuContent>

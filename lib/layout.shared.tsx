@@ -9,23 +9,12 @@ export const linkItems: LinkItemType[] = [
   {
     icon: <AlbumIcon />,
     text: 'Blog',
-    url: '/blog',
+    url: 'https://i615.cn/',
     active: 'nested-url',
   },
   {
-    text: 'Showcase',
-    url: '/showcase',
-    icon: <LayoutTemplate />,
-    active: 'url',
-  },
-  {
-    text: 'Sponsors',
-    url: '/sponsors',
-    icon: <Heart />,
-  },
-  {
     type: 'icon',
-    url: 'https://github.com/fuma-nama/fumadocs',
+    url: 'https://github.com/Lewis-Lian/nextwiki',
     text: 'Github',
     icon: (
       <svg role="img" viewBox="0 0 24 24" fill="currentColor">
