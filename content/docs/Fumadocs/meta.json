@@ -1,6 +1,6 @@
 {
-  "title": "Framework",
-  "description": "The docs framework",
+  "title": "Fumadocs",
+  "description": "Fumadocs 相关教程引用",
   "icon": "Building",
   "root": true,
   "pages": [
