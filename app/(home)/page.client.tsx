@@ -20,6 +20,7 @@ import OpenAPIImg from './openapi.png';
 import NotebookImg from './notebook.png';
 import { cva } from 'class-variance-authority';
 
+
 export function CreateAppAnimation() {
   const installCmd = 'npm create fumadocs-app';
   const tickTime = 100;

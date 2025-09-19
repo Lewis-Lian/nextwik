@@ -38,6 +38,8 @@ import { TypeTable } from 'fumadocs-ui/components/type-table';
 import { owner, repo } from '@/lib/github';
 import { Marquee } from '@/app/(home)/marquee';
 import ArchImg from './arch.png';
+import { Banner } from 'fumadocs-ui/components/banner';
+
 
 const badgeVariants = cva(
   'inline-flex size-7 items-center justify-center rounded-full bg-fd-primary font-medium text-fd-primary-foreground',
@@ -63,6 +65,7 @@ export default function Page() {
           }}
         >
           <div className="relative">
+            
             <Hero />
             <UwuHero />
           </div>
@@ -500,13 +503,13 @@ function Introduction(): React.ReactElement {
               className: 'absolute inset-x-2 top-0 shadow-lg',
             }}
             code={`---
-title: My Documentation
----
+              title: My Documentation
+              ---
 
-## Introduction
+              ## Introduction
 
-Hello World
-`}
+              Hello World
+              `}
           />
           <Files className="z-2 mt-40 shadow-xl">
             <Folder name="content" defaultOpen>

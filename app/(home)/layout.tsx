@@ -12,6 +12,7 @@ import Preview from '@/public/banner.png';
 import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';
 import type { HTMLAttributes, ReactNode } from 'react';
 
+
 export default function Layout({ children }: LayoutProps<'/'>) {
   return (
     <HomeLayout

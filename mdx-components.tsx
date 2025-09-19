@@ -4,6 +4,8 @@ import * as TabsComponents from 'fumadocs-ui/components/tabs';
 import type { MDXComponents } from 'mdx/types';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
 import * as icons from 'lucide-react';
+import { ImageZoom } from 'fumadocs-ui/components/image-zoom';
+import { Step, Steps } from 'fumadocs-ui/components/steps';
 
 export function getMDXComponents(components?: MDXComponents) {
   return {
@@ -13,6 +15,9 @@ export function getMDXComponents(components?: MDXComponents) {
     ...FilesComponents,
     Accordion,
     Accordions,
+    Step,
+    Steps,
+    img: (props) => <ImageZoom {...(props as any)} />,
     ...components,
   } satisfies MDXComponents;
 }
